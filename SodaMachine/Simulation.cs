@@ -8,5 +8,15 @@ namespace SodaMachine
 {
     class Simulation
     {
+        SodaMachine soadMachine;
+        Customer customer;
+        public Simulation()
+        {
+
+        }
+        public void RunMachine()
+        {
+
+        }
     }
 }
