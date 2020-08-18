@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace SodaMachine
 {
-    class SodaMachine
+    public class SodaMachine
     {
+        public List<Can> inventory;
+        public List<Coin> register;
+        public SodaMachine()
+        {
+
+        }
     }
 }
