@@ -10,9 +10,9 @@ namespace SodaMachine
     {
         public Coin()
         {
-            private double value;
-            public double Value;
-            public string name;
+            public double coinValue;
+            private double Value;
+            public string coinName;
         }
     }
 }
