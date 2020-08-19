@@ -8,12 +8,11 @@ namespace SodaMachine
 {
     public abstract class Coin
     {
-        private double value;
-        public double Value;
-        public string name;
         public Coin()
         {
-
+            private double value;
+            public double Value;
+            public string name;
         }
     }
 }
