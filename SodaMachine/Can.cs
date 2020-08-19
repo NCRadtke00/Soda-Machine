@@ -10,6 +10,7 @@ namespace SodaMachine
 {
     public abstract class Can
     {
+
         public Can()
         {
             public double canCost;
