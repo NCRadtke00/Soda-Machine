@@ -10,7 +10,7 @@ namespace SodaMachine
     {
         public double cost;
         public double Cost;
-        public string name;
+        public string canName;
         public Can()
         {
 

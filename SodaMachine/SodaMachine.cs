@@ -8,18 +8,21 @@ namespace SodaMachine
 {
     public class SodaMachine
     {
-        public List<Can> inventory;
+        public List<Can> cans;
         public List<Coin> register;
         public SodaMachine()
         {
+            double colaPrice = .35;
+            double rootBeerPrice = .60;
+            double orangeSodaPrice = .06;
 
         }
         public void Inventory()
         {
-            inventory = new List<Can>();
-            this.inventory.Add("RootBeer"); //(25, "RootBeer", .60)
-            this.inventory.Add("Cola"); //(30,"Cola", .35)
-            this.inventory.Add("Orange"); //(45, "Orange", .06)
+            cans= new List<Can>();
+            this.can.Add("RootBeer");
+            this.can.Add("Cola");
+            this.can.Add("Orange");
         }
         public void Register()
         {
@@ -29,5 +32,8 @@ namespace SodaMachine
             this.register.Add(20, "Nickle");
             this.register.Add(50, "Penny");
         }
+        public void DispenseCan();
+        public void ProcessPayment();
+
     }
 }
