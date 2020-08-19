@@ -8,5 +8,9 @@ namespace SodaMachine
 {
     public class RootBeer : Can
     {
+        public RootBeer()
+        {
+            
+        }
     }
 }
