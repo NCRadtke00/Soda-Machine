@@ -10,7 +10,8 @@ namespace SodaMachine
     {
         public Cola()
         {
-            
+            canName = "Cola";
+            canCost = .30;
         }
     }
 }
