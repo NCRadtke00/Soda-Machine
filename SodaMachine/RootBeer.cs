@@ -10,7 +10,8 @@ namespace SodaMachine
     {
         public RootBeer()
         {
-            
+            canName = "RootBeer";
+            canCost = .60;
         }
     }
 }
