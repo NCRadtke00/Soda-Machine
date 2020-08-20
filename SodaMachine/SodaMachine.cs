@@ -8,7 +8,7 @@ namespace SodaMachine
 {
     public class SodaMachine
     {
-        public List<Can> cans;
+        public List<Can> can;
         public List<Coin> register;
         public SodaMachine()
         {
@@ -19,7 +19,7 @@ namespace SodaMachine
         }
         public void Inventory()
         {
-            cans= new List<Can>();
+            can= new List<Can>();
             this.can.Add("RootBeer");
             this.can.Add("Cola");
             this.can.Add("Orange");
