@@ -8,10 +8,16 @@ namespace SodaMachine
 {
     class Backpack
     {
-        public List<Can> can;
-        public Backpack()
-        {
+        public List<Can> backpack;
 
+        public Backpack(Can can)
+        {
+            AddCansToBackpack(can);
+            backpack = new List<Can>();
+        }
+        public void AddCansToBackpack(Can can)
+        {
+            backpack.Add(can);
         }
     }
 }

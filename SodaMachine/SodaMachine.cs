@@ -38,7 +38,7 @@ namespace SodaMachine
             {
                 Penny penny = new Penny();
                 register.Add(penny);
-            }
+            }  
         }
         public void AddCansToSodaMachine()
         {
