@@ -62,5 +62,9 @@ namespace SodaMachine
         {
             inventory.Remove(can);
         }
+        public void ReturnChange(Coin coin)
+        {
+            register.Remove(coin);
+        }
     }
 }
