@@ -8,67 +8,59 @@ namespace SodaMachine
 {
     public class SodaMachine
     {
-        public List<Can> cans;
+        public List<Can> inventory;
         public List<Coin> register;
-        public List<RootBeer> RootBeers;
-        public List<Cola> Colas;
-        public List<OrangeSoda> OrangeSodas;
         public SodaMachine()
         {
-        }
-        public void Inventory()
-        {
-            RootBeers = new List<RootBeer>();
-            Colas = new List<Cola>();
-            OrangeSodas = new List<OrangeSoda>();
-
-            cans = new List<Can>();
-            this.cans.Add("RootBeers");
-            this.cans.Add("Colas");
-            this.cans.Add("OrangeSodas");
-        }
-        public void Register()
-        {
+            AddCansToSodaMachine();
+            inventory = new List<Can>();
+            StockCoinsInSodaMachine();
             register = new List<Coin>();
-            this.register.Add("Quarters");
-            this.register.Add("Dimes");
-            this.register.Add("Nickle");
-            this.register.Add("Penny");
+        }
+        public void StockCoinsInSodaMachine()
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                Quarter quarter = new Quarter();
+                register.Add(quarter);
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                Dime dime = new Dime();
+                register.Add(dime);
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                Nickle nickle = new Nickle();
+                register.Add(nickle);
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                Penny penny = new Penny();
+                register.Add(penny);
+            }
         }
         public void AddCansToSodaMachine()
         { 
             for (int i = 0; i < 25; i++)
             {
                 Cola cola = new Cola();
-                Colas.Add(cola);
+                inventory.Add(cola);
             }
             for (int i = 0; i < 25; i++)
             {
                 RootBeer rootBeer = new RootBeer();
-                RootBeers.Add(rootBeer);
+                inventory.Add(rootBeer);
             }
             for (int i = 0; i < 25; i++)
             {
                 OrangeSoda orangeSoda = new OrangeSoda();
-                OrangeSodas.Add(orangeSoda);
+                inventory.Add(orangeSoda);
             }
         }
-        public void DispenseCans()
+        public void DispenseCans(Can can)
         {
-            if (RootBeer)
-            {
-                RootBeers.RemoveAt(0);
-            }
-            else if(Cola)
-            {
-                Colas.RemoveAt(0);
-            }
-            else if ()
-
-
+                inventory.Remove(can);
         }
-        
-        //public void ProcessPayment();
-
     }
 }
