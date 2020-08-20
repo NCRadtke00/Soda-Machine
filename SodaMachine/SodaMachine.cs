@@ -8,32 +8,67 @@ namespace SodaMachine
 {
     public class SodaMachine
     {
-        public List<Can> can;
+        public List<Can> cans;
         public List<Coin> register;
+        public List<RootBeer> RootBeers;
+        public List<Cola> Colas;
+        public List<OrangeSoda> OrangeSodas;
         public SodaMachine()
         {
-            double colaPrice = .35;
-            double rootBeerPrice = .60;
-            double orangeSodaPrice = .06;
-
         }
         public void Inventory()
         {
-            can= new List<Can>();
-            this.can.Add("RootBeer");
-            this.can.Add("Cola");
-            this.can.Add("Orange");
+            RootBeers = new List<RootBeer>();
+            Colas = new List<Cola>();
+            OrangeSodas = new List<OrangeSoda>();
+
+            cans = new List<Can>();
+            this.cans.Add("RootBeers");
+            this.cans.Add("Colas");
+            this.cans.Add("OrangeSodas");
         }
         public void Register()
         {
             register = new List<Coin>();
-            this.register.Add(20, "Quarters");
-            this.register.Add(10, "Dimes");
-            this.register.Add(20, "Nickle");
-            this.register.Add(50, "Penny");
+            this.register.Add("Quarters");
+            this.register.Add("Dimes");
+            this.register.Add("Nickle");
+            this.register.Add("Penny");
         }
-        public void DispenseCan();
-        public void ProcessPayment();
+        public void AddCansToSodaMachine()
+        { 
+            for (int i = 0; i < 25; i++)
+            {
+                Cola cola = new Cola();
+                Colas.Add(cola);
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                RootBeer rootBeer = new RootBeer();
+                RootBeers.Add(rootBeer);
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                OrangeSoda orangeSoda = new OrangeSoda();
+                OrangeSodas.Add(orangeSoda);
+            }
+        }
+        public void DispenseCans()
+        {
+            if (RootBeer)
+            {
+                RootBeers.RemoveAt(0);
+            }
+            else if(Cola)
+            {
+                Colas.RemoveAt(0);
+            }
+            else if ()
+
+
+        }
+        
+        //public void ProcessPayment();
 
     }
 }
