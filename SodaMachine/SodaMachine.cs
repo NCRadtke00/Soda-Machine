@@ -40,5 +40,27 @@ namespace SodaMachine
                 register.Add(penny);
             }
         }
+        public void AddCansToSodaMachine()
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                Cola cola = new Cola();
+                inventory.Add(cola);
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                RootBeer rootBeer = new RootBeer();
+                inventory.Add(rootBeer);
+            }
+            for (int i = 0; i < 25; i++)
+            {
+                OrangeSoda orangeSoda = new OrangeSoda();
+                inventory.Add(orangeSoda);
+            }
+        }
+        public void DispenseCans(Can can)
+        {
+            inventory.Remove(can);
+        }
     }
 }
