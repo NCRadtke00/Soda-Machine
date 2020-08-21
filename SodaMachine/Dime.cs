@@ -8,7 +8,7 @@ namespace SodaMachine
 {
     public class Dime : Coin
     {
-        public Dime()
+        public Dime(string name)
         {
             coinValue = .10;
             coinName = "Dime";

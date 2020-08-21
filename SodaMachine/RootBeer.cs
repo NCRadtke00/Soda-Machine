@@ -8,7 +8,7 @@ namespace SodaMachine
 {
     public class RootBeer : Can
     {
-        public RootBeer()
+        public RootBeer(string name)
         {
             canName = "RootBeer";
             canCost = .60;

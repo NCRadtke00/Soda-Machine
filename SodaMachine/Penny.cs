@@ -8,7 +8,7 @@ namespace SodaMachine
 {
     public class Penny : Coin
     {
-        public Penny()
+        public Penny(string name)
         {
             coinName = "Penny";
             coinValue = .01;

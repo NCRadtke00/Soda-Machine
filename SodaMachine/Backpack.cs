@@ -9,7 +9,7 @@ namespace SodaMachine
     class Backpack
     {
         public List<Can> backpack;
-
+        //should I take addcan out of backpack class
         public Backpack(Can can)
         {
             AddCansToBackpack(can);

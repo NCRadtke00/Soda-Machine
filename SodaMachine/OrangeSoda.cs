@@ -8,9 +8,9 @@ namespace SodaMachine
 {
     public class OrangeSoda : Can
     {
-        public OrangeSoda()
+        public OrangeSoda(string name)
         {
-            canName = "Orange PoP";
+            canName = "OrangeSoda";
             canCost = .06;
         }
     }

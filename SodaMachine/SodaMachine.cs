@@ -11,51 +11,45 @@ namespace SodaMachine
         public List<Can> inventory;
         public List<Coin> register;
         public SodaMachine()
-        {
-            AddCansToSodaMachine();
+        { 
             inventory = new List<Can>();
+            AddCansToSodaMachine();
+           register = new List<Coin>();
             StockCoinsInSodaMachine();
-            register = new List<Coin>();
+            
         }
         public void StockCoinsInSodaMachine()
         {
             for (int i = 0; i < 20; i++)
             {
-                Quarter quarter = new Quarter();
-                register.Add(quarter);
+                register.Add(new Quarter("quarter"));
             }
             for (int i = 0; i < 10; i++)
             {
-                Dime dime = new Dime();
-                register.Add(dime);
+                register.Add(new Dime("dime"));
             }
             for (int i = 0; i < 20; i++)
             {
-                Nickle nickle = new Nickle();
-                register.Add(nickle);
+                register.Add(new Nickle("nickle"));
             }
             for (int i = 0; i < 50; i++)
             {
-                Penny penny = new Penny();
-                register.Add(penny);
+                register.Add(new Penny("penny"));
             }  
         }
         public void AddCansToSodaMachine()
         {
             for (int i = 0; i < 25; i++)
             {
-                Cola cola = new Cola();
-                inventory.Add(cola);
+                inventory.Add(new Cola("cola"));
             }
             for (int i = 0; i < 25; i++)
             {
-                RootBeer rootBeer = new RootBeer();
-                inventory.Add(rootBeer);
+                inventory.Add(new RootBeer("rootBeer"));
             }
             for (int i = 0; i < 25; i++)
             {
-                OrangeSoda orangeSoda = new OrangeSoda();
-                inventory.Add(orangeSoda);
+                inventory.Add(new OrangeSoda("orangeSoda"));
             }
         }
         public void DispenseCans(Can can)
@@ -65,6 +59,15 @@ namespace SodaMachine
         public void ReturnChange(Coin coin)
         {
             register.Remove(coin);
+        }
+        public double RegisterTotal(List<Coin> coins)
+        {
+            double registerTotal = 0;
+            for (int i = 0; i < coins.Count; i++)
+            {
+                registerTotal += coins[i].CoinValue;
+            }
+            return registerTotal;
         }
     }
 }

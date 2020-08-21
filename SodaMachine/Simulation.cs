@@ -12,11 +12,16 @@ namespace SodaMachine
         Customer customer;
         public Simulation()
         {
-
+            soadMachine = new SodaMachine();
+            customer = new Customer();
         }
         public void RunMachine()
         {
-
+            UserInterface.WelcomeScreen();
+            //UserInterface.CheckWallet();
+            UserInterface.PickASoda();
+           BuyASoda(UserInterface.PickCoins());
         }
+ 
     }
 }
