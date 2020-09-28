@@ -10,15 +10,16 @@ namespace SodaMachine
     {
         public List<Can> inventory;
         public List<Coin> register;
+        public string customerChoice;
         public SodaMachine()
         { 
             inventory = new List<Can>();
-            AddCansToSodaMachine();
+            AddCansToSodaMachineInventory();
            register = new List<Coin>();
-            StockCoinsInSodaMachine();
+            StockCoinsInSodaMachineRegister();
             
         }
-        public void StockCoinsInSodaMachine()
+        public void StockCoinsInSodaMachineRegister()
         {
             for (int i = 0; i < 20; i++)
             {
@@ -37,7 +38,7 @@ namespace SodaMachine
                 register.Add(new Penny("penny"));
             }  
         }
-        public void AddCansToSodaMachine()
+        public void AddCansToSodaMachineInventory()
         {
             for (int i = 0; i < 25; i++)
             {
@@ -68,6 +69,26 @@ namespace SodaMachine
                 registerTotal += coins[i].CoinValue;
             }
             return registerTotal;
+        }
+        public Can PickASoda()
+        {
+            customerChoice = UserInterface.PickASoda();
+            Can can;
+            switch (customerChoice)
+            {
+                case "1":
+                    can = inventory.Find(x => x.canName == "RootBeer");
+                    return can;
+                case "2":
+                    can = inventory.Find(x => x.canName == "Cola");
+                    return can;
+                case "3":
+                    can = inventory.Find(x => x.canName == "OrangeSoda");
+                    return can;
+                default;
+                    Console.WriteLine("Please pick again.");
+                    return PickASoda();
+            }
         }
     }
 }

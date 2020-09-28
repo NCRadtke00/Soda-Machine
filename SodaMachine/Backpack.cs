@@ -8,7 +8,7 @@ namespace SodaMachine
 {
     class Backpack
     {
-        public List<Can> backpack;
+        public List<Can> can;
         //should I take addcan out of backpack class
         public Backpack(Can can)
         {

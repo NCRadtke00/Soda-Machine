@@ -12,10 +12,13 @@ namespace SodaMachine
     {
         public Wallet wallet;
         public Backpack backpack;
+       
+        //public int id;
         public Customer()
         {
             wallet = new Wallet();
-            //backpack = new Backpack();
+            backpack = new Backpack();
+       
 
         }
 
@@ -32,7 +35,7 @@ namespace SodaMachine
                     case "0":
                         for (int i = 0; i < wallet.coins[i]; i++)
                         {
-                            if (wallet.coins[i].coinName == "Penny")
+                            if (wallet.coins[i].coinName == "penny")
                             {
                                 Coin coin1 = wallet.coins[i];
                                 wallet.coins.Remove(coin1);
@@ -44,7 +47,7 @@ namespace SodaMachine
                     case "1":
                         for (int i = 0; i < wallet.coins[i]; i++)
                         {
-                            if (wallet.coins[i].coinName == "Nickle")
+                            if (wallet.coins[i].coinName == "nickle")
                             {
                                 Coin coin1 = wallet.coins[i];
                                 wallet.coins.Remove(coin1);
@@ -95,10 +98,10 @@ namespace SodaMachine
             //•	If exact or too much money is passed in but there isn’t sufficient inventory for that soda, don’t complete the transaction: give the money back.
 
         }
-    //public void AddCansToBackpack(Can can)
-    //{
-    //    backpack.Add(can);
-    //}
+    public void AddCansToBackpack(Can can)
+    {
+       backpack.Add(can);
+    }
 } 
 }
 
